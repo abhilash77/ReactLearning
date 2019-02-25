@@ -14,8 +14,18 @@ class App extends Component {
 
   }
 
-  swtichNameHandler = () => {
-    console.log("this is clicked");
+  switchNameHandler = () => {
+    //console.log("this is clicked");
+    this.setState({
+      persons: [
+        { name: 'Rishabh Pant', age: 22 },
+        { name: 'Rahul', age: 29 },
+        { name: 'Mahi', age: 27 },
+        { name: 'Abhi', age: 25 },
+
+      ]
+
+    })
   }
 
   render() {
@@ -23,7 +33,7 @@ class App extends Component {
       <div className="App">
         <h1>Hey Yoo, Wassup!!</h1>
         <h3>This is really working</h3>
-        <button onClick={this.swtichNameHandler} >Switch Name</button>
+        <button onClick={this.switchNameHandler} >Switch Name</button>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} >My Hobbies: Cricket, Football</Person>
